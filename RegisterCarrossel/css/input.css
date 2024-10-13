@@ -1,0 +1,47 @@
+.inputfield{
+
+    &.right{
+        transform: translateX(100%);
+    }
+
+    &.left {
+        transform: translateX(-100%);
+    }
+
+    span{
+        display: block;
+        margin-bottom: 10px;
+
+        font-weight: 500;
+        font-size: 1.2em;
+        color: var(--black);
+    }
+
+    input{
+
+        &:active{
+            transform: scale(.95);
+        }
+
+        width: 100%;
+        height: 100%;
+
+        border: 2px solid var(--black);
+        border-radius: 10px;
+
+        outline: none;
+
+        padding: 0 10px;
+
+        transition: 
+            transform ease .3s;
+    }
+
+    width: 100%;
+    height: 50px;
+    
+    transform: translateX(0%);
+    
+    transition: 
+        transform ease-in-out .3s;
+}
