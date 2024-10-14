@@ -9,19 +9,28 @@ var control = {
                 user.moveTo.center()
                 pass.moveTo.right()
                 conf.moveTo.right()
+                question.moveTo.right()
                 prev.disable()
+
+                next.changeText("Next step");
                 break
             case 1:
                 user.moveTo.left()
                 pass.moveTo.center()
                 conf.moveTo.center()
+                question.moveTo.right()
                 prev.enable()
+
+                next.changeText("Next step");
                 break
             case 2:
                 user.moveTo.left()
                 pass.moveTo.left()
                 conf.moveTo.left()
+                question.moveTo.center()
                 prev.enable()
+
+                next.changeText("Register!");
                 break
         }
     }
@@ -31,10 +40,14 @@ var next = {
     element: document.getElementById("nextButton"),
     state  : false,
     onClick: function(){
-        if (control.index < 3){
+        if (control.index < 2){
             control.index += 1
             control.select(control.index)
         }
+    },
+
+    changeText(newText){
+        this.element.innerText = newText;
     },
 
     enable : function(){

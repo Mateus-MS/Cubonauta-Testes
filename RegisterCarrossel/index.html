@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="./css/input.css">
     <link rel="stylesheet" href="./css/buttons.css">
     <link rel="stylesheet" href="./css/balloon.css">
+    <link rel="stylesheet" href="./css/question.css">
 
     <script src="./js/buttons.js" defer></script>
     <script src="./js/balloon.js" defer></script>
     
-    <script src="./js/sections/user.js"  defer></script>
-    <script src="./js/sections/pass.js"  defer></script>
-    <script src="./js/sections/conf.js"  defer></script>
+    <script src="./js/sections/user.js"      defer></script>
+    <script src="./js/sections/pass.js"      defer></script>
+    <script src="./js/sections/conf.js"      defer></script>
+    <script src="./js/sections/question.js"  defer></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.8/purify.min.js"></script>
 
@@ -39,6 +41,29 @@
                 <span>Confirm password</span>
                 <input class="pass" type="password">
                 <button class="hidden" onclick="hidePass(this.previousElementSibling, this)">&#xE800;</button>
+            </div>
+        </div>
+
+        <div id="question" class="right">
+            <span>Do you solve the Rubik's Cube ever before?</span>
+
+            <div id="holder">
+
+                <input type="radio" id="opt1" value="opt1" name="options" hidden>
+                <label for="opt1">
+                    <div>A lot of times 😎</div>
+                </label>
+
+                <input type="radio" id="opt2" value="opt2" name="options" hidden>
+                <label for="opt2">
+                    <div>So long ago 🥺</div>
+                </label>
+
+                <input type="radio" id="opt3" value="opt3" name="options" hidden>
+                <label for="opt3">
+                    <div>Never 🫡</div>
+                </label>
+
             </div>
         </div>
 
