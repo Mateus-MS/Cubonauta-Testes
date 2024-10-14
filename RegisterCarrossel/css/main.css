@@ -1,9 +1,16 @@
+@font-face {
+    font-family: icons;
+    src: url("../src/fonts/icons.ttf");
+}
+
 *{
     margin: 0;
     padding: 0;
     
     box-sizing: border-box;
     font-family: Arial;
+
+    user-select: none;
 
     --black: rgb(54, 54, 54);
 }
@@ -24,11 +31,10 @@ body{
     --v-padding: 40px;
     --h-padding: 30px;
 
-    /*To let the #buttonHolder be snapped at the bottom*/
-    position: relative; 
+    position: relative; /*To let the #buttonHolder be snapped at the bottom*/
 
     width: var(--width);
-    height: 60dvh;
+    height: 70dvh;
     overflow: hidden;
     padding: var(--v-padding) var(--h-padding);
 

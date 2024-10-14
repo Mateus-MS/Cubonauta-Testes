@@ -9,25 +9,48 @@
     <link rel="stylesheet" href="./css/input.css">
     <link rel="stylesheet" href="./css/buttons.css">
     <link rel="stylesheet" href="./css/balloon.css">
+
+    <script src="./js/buttons.js" defer></script>
+    <script src="./js/balloon.js" defer></script>
+    
+    <script src="./js/sections/user.js"  defer></script>
+    <script src="./js/sections/pass.js"  defer></script>
+    <script src="./js/sections/conf.js"  defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.8/purify.min.js"></script>
+
 </head>
 <body>
     <div id="container">
 
-        <div class="inputfield">
+        <div id="userField" class="inputfield">
             <span>User</span>
             <input type="text">
-            <!-- <button onclick="hidePass(this.previousElementSibling)">Test</button> -->
+        </div>
+
+        <div>
+            <div id="passField" class="inputfield right">
+                <span>Password</span>
+                <input class="pass" type="password">
+                <button class="hidden" onclick="hidePass(this.previousElementSibling, this)">&#xE800;</button>
+            </div>
+
+            <div id="confField" class="inputfield hidden">
+                <span>Confirm password</span>
+                <input class="pass" type="password">
+                <button class="hidden" onclick="hidePass(this.previousElementSibling, this)">&#xE800;</button>
+            </div>
         </div>
 
         <div id="buttonsHolder">
-            <button id="nextButton" class="button">Next step</button>
-            <button id="prevButton" class="button">Previous Step</button>
+            <button id="nextButton" class="button" disabled>Next step</button>
+            <button id="prevButton" class="button" disabled>Previous Step</button>
         </div>
 
     </div>
 
-    <!-- <div id="balloon">
-
-    </div> -->
+    <div id="balloon">
+        Chose wisely, this is how every one will know you. <u>But can be changed later</u>. 🤠
+    </div>
 </body>
 </html>

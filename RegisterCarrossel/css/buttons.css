@@ -20,6 +20,14 @@
             background-color: rgb(134, 134, 134);
         }
 
+        &:disabled{
+            &:active{
+                transform: none;
+            }
+
+            background-color: rgb(134, 134, 134);
+        }
+
         height: 50px;
 
         background-color: var(--black);
@@ -37,6 +45,14 @@
         &:active{
             transform: scale(.95);
             color: rgb(180, 180, 180);
+        }
+
+        &:disabled{
+            &:active{
+                transform: none;
+            }
+
+            visibility: hidden;
         }
 
         width: 100%;

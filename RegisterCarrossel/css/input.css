@@ -1,11 +1,30 @@
 .inputfield{
 
+    &#confField{
+
+        &.hidden{
+            transform: translate(0, 170%) scale(0);
+            opacity  : 0;
+        }
+
+        &.right{
+            transform: translate(150%, 170%);
+        }
+    
+        &.left {
+            transform: translate(-150%, 170%);
+        }
+        
+        transform: translate(0, 170%) scale(1);
+        opacity  : 1;
+    }
+
     &.right{
-        transform: translateX(100%);
+        transform: translate(150%, var(--v-padding));
     }
 
     &.left {
-        transform: translateX(-100%);
+        transform: translate(-150%, var(--v-padding));
     }
 
     span{
@@ -14,17 +33,21 @@
 
         font-weight: 500;
         font-size: 1.2em;
-        color: var(--black);
+        color: rgb(126, 126, 126);
     }
 
     input{
+
+        &.pass{
+            padding-right: 15%;
+        }
 
         &:active{
             transform: scale(.95);
         }
 
         width: 100%;
-        height: 100%;
+        height: 45px;
 
         border: 2px solid var(--black);
         border-radius: 10px;
@@ -33,15 +56,74 @@
 
         padding: 0 10px;
 
+        letter-spacing: 1px;
+        color: var(--black);
+        font-size: 1.2em;
+
         transition: 
             transform ease .3s;
     }
 
-    width: 100%;
-    height: 50px;
+    button{
+
+        &.hidden{
+
+            &::after{
+                width: 3px;
+                height: 20px;
+            }
+
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+
+            width : 0px;
+            height: 0px;
+            background-color: var(--black);
+            border: 2px solid white;
+            border-radius: 10px;
+
+            transform: rotate(45deg);
+
+            inset: 0;
+            margin: auto;
+
+            transition: 
+                width  ease .3s,
+                height ease .3s;
+        }
+
+        &:active{
+            transform: translateY(50%) scale(.95);
+            background-color: rgb(180, 180, 180);
+            background: none;
+        }
+
+        position: absolute;
+        right: 4.8%;
+        bottom: calc(45px / 2);
+        transform: translateY(50%);
+
+        padding: 5px;
+
+        background: none;
+        border: none;
+
+        font-family: icons;
+        font-size: 1.2em;
+        color: var(--black);
+    }
+
+    width: var(--width);
+    height: fit-content;
+
+    position: absolute;
+    top: 0;
     
-    transform: translateX(0%);
+    transform: translate(0%, var(--v-padding));
     
     transition: 
-        transform ease-in-out .3s;
+        transform ease-in .3s;
 }
